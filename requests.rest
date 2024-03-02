@@ -1,0 +1,28 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2FtcHUiLCJpYXQiOjE2OTc3ODg5MTUsImV4cCI6MTY5Nzc4OTUxNX0.2HYJuzLpMMtaz5Ze9ccsVuiAXsfu8jy1nX7Mzekm0TQ
+
+###
+POST http://localhost:4000/login
+content-type: application/json
+
+{
+    "username": "Sampu"
+}
+ 
+###
+POST http://localhost:4000/token
+content-type: application/json
+
+{
+    //refresh token
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2FtcHUiLCJpYXQiOjE2OTc3ODg5MTV9.yJSPDWm5fo7IGO-VidhuxNtyhtYtL1BQpi8n3IiKg-c"
+} 
+
+###
+DELETE http://localhost:4000/logout
+
+content-Type: application/json
+//refresh token
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2FtcHUiLCJpYXQiOjE2OTc3ODg5MTV9.yJSPDWm5fo7IGO-VidhuxNtyhtYtL1BQpi8n3IiKg-c"
+}
